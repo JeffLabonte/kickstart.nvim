@@ -93,11 +93,13 @@ return {
         return ".venv/bin/python"
       end
 
-      table.insert(require('dap').configurations.python, {
+      local dap_python_configs = dap.configurations.python
+      table.insert(dap_python_configs, {
         name = 'Test Selected Test File',
         type = 'python',
         request = 'launch',
         module = "pytest",
+        justMyCode = false,
         args = {
           "--runslow",
           "--randomly-dont-reset-seed",
@@ -105,6 +107,23 @@ return {
           "--ds=settings.test",
           "${file}",
         }
+      })
+
+      table.insert(dap_python_configs, {
+        name = 'All Unit Test',
+        type = 'python',
+        request = 'launch',
+        module = "pytest",
+        justMyCode = false,
+        args = {
+          "--runslow",
+          "--randomly-dont-reset-seed",
+          "--disable-warnings",
+          "--ds=settings.test",
+          "--randomly-seed=960571940", -- Change on need
+          "tests/unit",
+        }
+
       })
     end,
   }
