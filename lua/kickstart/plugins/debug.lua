@@ -120,10 +120,22 @@ return {
           "--randomly-dont-reset-seed",
           "--disable-warnings",
           "--ds=settings.test",
-          "--randomly-seed=960571940", -- Change on need
+          "--randomly-seed=560270402", -- Change on need
           "tests/unit",
         }
+      })
 
+      table.insert(dap_python_configs, {
+        name = 'Django Run Server',
+        type = 'python',
+        request = 'launch',
+        program = "manage.py",
+        django = true,
+        justMyCode = false,
+        args = {
+          "runserver",
+          "--settings=settings.dev",
+        }
       })
     end,
   }
