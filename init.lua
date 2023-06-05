@@ -318,11 +318,11 @@ end, { desc = '[E]xplore' })
 
 vim.keymap.set('n', '<leader>me', function()
   vim.cmd("HopAnywhere")
-end, {desc = '[M]ove Anywhere'})
+end, { desc = '[M]ove Anywhere' })
 
 vim.keymap.set('n', '<leader>mc', function()
   vim.cmd("HopChar2")
-end, {desc = '[M]ove To Characters'})
+end, { desc = '[M]ove To Characters' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
