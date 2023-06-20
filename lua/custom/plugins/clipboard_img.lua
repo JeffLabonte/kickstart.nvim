@@ -1,3 +1,3 @@
 return {
-  "ekickx/clipboard-image.nvim"
+  "postfen/clipboard-image.nvim"
 }
