@@ -68,7 +68,6 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  'wakatime/vim-wakatime',
   {
     'phaazon/hop.nvim',
     branch = "v2",
