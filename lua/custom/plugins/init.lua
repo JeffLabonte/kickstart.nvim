@@ -7,4 +7,7 @@ return {
     'codota/tabnine-nvim',
     build = "./dl_binaries.sh",
   },
+  {
+    'nvim-neotest/nvim-nio'
+  }
 }
