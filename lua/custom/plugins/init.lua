@@ -24,5 +24,9 @@ return {
   },
   {
     'nvim-neotest/nvim-nio'
-  }
+  },
+  {
+    'echasnovski/mini.nvim',
+    version = false
+  },
 }
